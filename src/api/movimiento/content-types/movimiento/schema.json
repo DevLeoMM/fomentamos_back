@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "movimientos",
+  "info": {
+    "singularName": "movimiento",
+    "pluralName": "movimientos",
+    "displayName": "movimientos"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo_movimiento": {
+      "type": "enumeration",
+      "enum": [
+        "ingreso",
+        "egreso"
+      ]
+    },
+    "monto": {
+      "type": "biginteger"
+    },
+    "cuenta": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cuenta.cuenta",
+      "inversedBy": "movimientos_cuenta"
+    }
+  }
+}

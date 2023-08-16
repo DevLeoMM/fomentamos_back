@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "singularName": "cliente",
+    "pluralName": "clientes",
+    "displayName": "clientes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "tipo_documento": {
+      "type": "string"
+    },
+    "numero_documento": {
+      "type": "biginteger"
+    },
+    "rut": {
+      "type": "string",
+      "unique": true
+    },
+    "razon_social": {
+      "type": "string"
+    },
+    "fecha_fundacion": {
+      "type": "biginteger"
+    },
+    "cuentas": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cuenta.cuenta",
+      "mappedBy": "cliente"
+    },
+    "tipo_cliente": {
+      "type": "string"
+    }
+  }
+}

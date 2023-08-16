@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuentas",
+  "info": {
+    "singularName": "cuenta",
+    "pluralName": "cuentas",
+    "displayName": "cuentas",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "saldo": {
+      "type": "biginteger",
+      "required": false
+    },
+    "cliente": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cliente.cliente",
+      "inversedBy": "cuentas"
+    },
+    "movimientos_cuenta": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::movimiento.movimiento",
+      "mappedBy": "cuenta"
+    },
+    "moneda": {
+      "type": "enumeration",
+      "enum": [
+        "peso",
+        "dolar",
+        "euro"
+      ]
+    },
+    "numero_cuenta": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
