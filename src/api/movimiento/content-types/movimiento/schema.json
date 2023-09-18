@@ -4,7 +4,8 @@
   "info": {
     "singularName": "movimiento",
     "pluralName": "movimientos",
-    "displayName": "movimientos"
+    "displayName": "movimientos",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -19,7 +20,7 @@
       ]
     },
     "monto": {
-      "type": "biginteger"
+      "type": "decimal"
     },
     "cuenta": {
       "type": "relation",

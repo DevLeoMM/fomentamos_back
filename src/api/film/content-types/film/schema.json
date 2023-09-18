@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "films",
+  "info": {
+    "singularName": "film",
+    "pluralName": "films",
+    "displayName": "films",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "film_asociado": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::film.film"
+    }
+  }
+}
